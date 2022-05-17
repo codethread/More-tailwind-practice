@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.input {
+		@apply rounded-md border border-gray-400 p-2 text-black outline-none;
+	}
+
+	.input:focus {
+		@apply ring ring-slate-400;
+	}
+}
