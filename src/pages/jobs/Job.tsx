@@ -1,13 +1,15 @@
 import { useId } from 'react';
-import { Card, FormItem, FormItemNumber, FormItemText } from '../../components';
+import { Card, FormItem, FormItemNumber, FormItemText, InputSelectFactory } from '../../components';
 import { useText } from '../../hooks';
-import { InputSelectOccupation } from './Inputs';
+import { occupations } from './info';
 import { Job, JobDispatch } from './reducer';
 
 interface IJob extends Job {
 	number: number;
 	dispatch: JobDispatch;
 }
+
+export const InputSelectOccupation = InputSelectFactory(occupations);
 
 export function JobInfo({ number, companyName, dispatch, occupation, income }: IJob) {
 	const {

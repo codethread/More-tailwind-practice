@@ -1,9 +1,10 @@
 import { useId } from 'react';
-import { Card, FormItem } from '../../components';
+import { Card, FormItem, InputSelectFactory } from '../../components';
 import { useText } from '../../hooks';
-import { OutOfWorkState } from './info';
-import { InputSelectUnemployed } from './Inputs';
+import { OutOfWorkState, outOfWorkStatus } from './info';
 import { JobDispatch } from './reducer';
+
+export const InputSelectUnemployed = InputSelectFactory(outOfWorkStatus);
 
 export function NoJobs({ dispatch, current }: { dispatch: JobDispatch; current?: OutOfWorkState }) {
 	const {
