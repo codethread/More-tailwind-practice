@@ -48,6 +48,7 @@ export function JobInfo({ number, companyName, dispatch, occupation, income }: I
 			<FormItemNumber
 				label={jobInput.income}
 				input={{
+					step: 1,
 					max: 1000000,
 					min: 0,
 					placeholder: jobInput.incomePlaceholder,
